@@ -10,7 +10,10 @@ import createModule from "./application.mjs";
  * TODO styling the component
  */
 
-const WasmModule: FC = () => {
+type Props = {
+};
+
+const WasmModule: FC<Props> = ({} : Props) => {
 
     const [module, setModule] = useState<any | null>({});
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -20,8 +23,6 @@ const WasmModule: FC = () => {
             setModule(module);
         });
     }, []);
-
-    console.log(module);
     
     if (!module) return <div>Loading WebAssembly module...</div>;
     else return <canvas id="canvas" ref={canvasRef}></canvas>;
