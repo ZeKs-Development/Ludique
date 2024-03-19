@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
+    background: linear-gradient(0.75turn, #274c43, #34665a);
+    height: 120px;
+}
+
+.header__logo, .header__logo:visited, .header__logo:hover {
+    margin-left: 100px;
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+.header__login, .header__login:visited, .header__login:hover {
+    padding: 10px;
+    margin-right: 100px;
+    text-decoration: none;
+    color: #f3f3f3;
+    border: solid 2px #f3f3f3;
+    border-radius: 5px;
+}
+
+.header__login:hover {
+    border: none;
+    background-color: #e99a0a;
+}

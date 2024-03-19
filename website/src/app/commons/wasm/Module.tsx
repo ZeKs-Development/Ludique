@@ -1,6 +1,6 @@
 "use client"
 import { FC, useEffect, useRef, useState } from "react";
-import createModule from "./application.mjs";
+import createModule from "./Module.mjs";
 
 /**
  * TODO add a spinner when module is loading
