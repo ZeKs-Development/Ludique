@@ -7,16 +7,16 @@ CFLAGS=--no-entry --pre-js ./locateFile.js  \
 	-s EXPORTED_RUNTIME_METHODS='["ccall", "cwrap", "getValue", "setValue"]'  \
 	-s USE_SDL=2 
 
-all: application.wasm
+all: Module.wasm
 
 %.wasm: %.mjs
 	
 %.mjs: %.cpp
 	$(CC) $< -o $@ $(CFLAGS)
-	mv $*.wasm ../website/public/$*.wasm
-	mv $*.mjs ../website/src/app/$*.mjs
+	mv $*.wasm ../website/public/wasm/$*.wasm
+	mv $*.mjs ../website/src/app/commons/wasm/$*.mjs
 
 
 .PHONY: clean
 clean:
-	rm ../website/public/*.wasm ../website/src/app/*.mjs
+	rm ../website/public/wasm/*.wasm ../website/src/app/commons/wasm/*.mjs
